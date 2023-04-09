@@ -131,6 +131,43 @@ a:hover {
   color: var(--link-hover-color);
 }
 
+ul {
+  line-height: 1.5em;
+  margin: 5px 0 15px;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  position: relative;
+  padding: 0 0 0 20px;
+}
+
+li.curved-arrow::before {
+  content: "";
+  position: absolute;
+  width: 0; 
+  height: 0;
+  left: 4px;
+  top: 3px;
+  border-top: 9px solid transparent; 
+  border-right: 9px solid #f9dd94;
+  transform: rotate(10deg);
+}
+
+li.curved-arrow::after {
+  content: "";
+  position: absolute;
+  border: 0 solid transparent; 
+  border-top: 3px solid #f9dd94;
+  border-radius: 20px 0 0 0; 
+  top: 0; 
+  left: -5px; 
+  width: 12px; 
+  height: 12px; 
+  transform: rotate(45deg);
+}
+
 /* buttons */
 a.button:any-link, button {
   font-family: var(--body-font-family);
